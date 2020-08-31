@@ -33,8 +33,8 @@ function autoloader( $resource = '' ) {
     );
 
 	/**
-	 * Time to determine which type of resource path it is,
-	 * so that we can deduce the correct file path for it.
+	 * Determine which type of resource path it is,
+	 * so that you know the correct file path for it.
 	 */
 	if ( empty( $path[0] ) || empty( $path[1] ) ) {
 		return;
