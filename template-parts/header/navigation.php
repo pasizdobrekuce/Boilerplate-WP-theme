@@ -7,6 +7,7 @@
 ?>
 
 <?php 
+// TODO pack this into static function
 $menu_class = \HEADLAB_THEME\Inc\MENUS::get_instance();
 $menu_id = $menu_class->get_menu_id('headlab-primary-menu');
 $primary_menu = wp_get_nav_menu_items( $menu_id );
