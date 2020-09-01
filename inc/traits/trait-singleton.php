@@ -3,6 +3,7 @@
  namespace HEADLAB_THEME\Inc\Traits;
 
  trait Singleton {
+     
     public function __construct() {
         
     }

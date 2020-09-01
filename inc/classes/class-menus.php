@@ -41,7 +41,7 @@ class Menus {
 
         // Throw error if menu ID not found
         if( empty( $menu_id ) ) {
-            throw new Exception("Menu with ID " . $menu_id . " not found. Try define it.");
+            return;
         }
 
         return wp_get_nav_menu_items( $menu_id );
