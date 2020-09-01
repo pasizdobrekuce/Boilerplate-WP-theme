@@ -32,13 +32,18 @@ class Menus {
         ]);
     }
 
-    public function get_menu_id( $location ) {
+    public function get_menu( $location ) {
         // Get all the locations
         $locations = get_nav_menu_locations();
 
         // Get object ID by location
         $menu_id = $locations[$location];
 
-        return ! empty( $menu_id ) ? $menu_id : '';
+        // Throw error if menu ID not found
+        if( empty( $menu_id ) ) {
+            throw new Exception("Menu with ID " . $menu_id . " not found. Try define it.");
+        }
+
+        return wp_get_nav_menu_items( $menu_id );
     }
 };
