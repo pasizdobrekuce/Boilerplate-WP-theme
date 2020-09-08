@@ -12,8 +12,9 @@ $menus = \HEADLAB_THEME\Inc\MENUS::get_instance();
 $primary_menu = $menus->get_menu('headlab-primary-menu');
 ?>
 
-<nav class="navbar navbar-expand fixed-top">
+<nav class="navbar navbar-expand fixed-top shadow-sm bg-white">
 
+	<div class="container px-3">
 	<?php if(has_custom_logo()) : the_custom_logo(); else : ?>
 		<a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
 	<?php endif; ?>
@@ -33,4 +34,6 @@ $primary_menu = $menus->get_menu('headlab-primary-menu');
 		
     </div>
 	<?php endif; ?>
+	</div>
+	
 </nav>

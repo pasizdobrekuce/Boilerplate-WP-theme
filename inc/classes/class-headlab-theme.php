@@ -1,6 +1,6 @@
 <?php
 /**
- * Boottstraps the theme,
+ * Bootstraps the theme,
  * 
  * @package Headlab
  */
@@ -20,6 +20,12 @@
 
         // Load menus
         Menus::get_instance();
+
+        // Load tags
+        Tags::get_instance();
+
+        // Load TaxonomyImages
+        TaxonomyImages::get_instance();
 
         // Run hooks
         $this->setup_hooks();

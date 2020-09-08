@@ -6,6 +6,10 @@
  */
 ?>
 
+
+
+        </main><!-- #main -->
+    </div> <!-- #primary -->
 </div><!-- /#page.site -->
 
 <?php wp_footer(); ?>

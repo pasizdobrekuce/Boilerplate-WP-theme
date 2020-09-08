@@ -61,9 +61,9 @@ class Assets {
         );
         wp_register_script( 
             'headlab-script', 
-            HEADLAB_DIR_URI . '/assets/src/js/main.js', 
+            HEADLAB_BUILD_JS_URI . '/main.js', 
             array('jquery'), 
-            filemtime(HEADLAB_DIR_PATH . '/assets/src/js/main.js'), 
+            filemtime(HEADLAB_BUILD_JS_DIR_PATH . '/main.js'), 
             true 
         );
 

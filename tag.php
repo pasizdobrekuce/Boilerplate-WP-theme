@@ -15,11 +15,18 @@
 
             <?php if ( have_posts() ) : ?>
                 
-                <?php if(is_home() && ! is_front_page()) : ?>
-                    <header class="col-12 page-header py-5 text-center">
-                        <h1 class="page-title text-uppercase">
-                            <?php single_post_title(); ?>
-                        </h1><!-- /.page-title -->
+                <?php if(is_archive() && ! is_front_page()) : ?>
+                    <header class="col-12 mx-auto page-header py-5 text-center">
+                        <div class="row">
+                            <div class="col-xl-6 mx-auto">
+                            <h1 class="page-title text-uppercase">
+                                <?php the_archive_title(); ?>
+                            </h1><!-- /.page-title -->
+                            <p class="page-description">
+                                <?php the_archive_description(); ?>
+                            </p>
+                            </div>
+                        </div>
                     </header>
                 <?php endif; ?>
             
