@@ -24,15 +24,18 @@
         // Load tags
         Tags::get_instance();
 
-        // Load TaxonomyImages
-        TaxonomyImages::get_instance();
+        // Load Taxonomy Images
+        Taxonomy_Images::get_instance();
+
+        // Load Meta Boxes
+        Meta_Boxes::get_instance();
 
         // Run hooks
-        $this->setup_hooks();
+        $this->init();
 
     }
 
-    public function setup_hooks() {
+    public function init() {
         /**
          * Actions
          */
@@ -82,10 +85,20 @@
         add_theme_support( 'post-thumbnails' );
 
         // Block styles
+        // @see https://developer.wordpress.org/block-editor/developers/themes/theme-support/#default-block-styles
         add_theme_support( 'wp-block-styles' );
 
         // Align wide & full width alignment for image block
+        // @see https://developer.wordpress.org/block-editor/developers/themes/theme-support/#wide-alignment
         add_theme_support( 'align-wide' );
+
+        // Editor styles support
+        // @see https://developer.wordpress.org/block-editor/developers/themes/theme-support/#editor-styles
+        add_theme_support( 'editor-styles' );
+        
+        // Enqueue editor styles
+        // @see https://developer.wordpress.org/block-editor/developers/themes/theme-support/#enqueuing-the-editor-style
+        add_editor_style( 'assets/build/css/editor.css' );
 
         // Max width sucks
         if( ! isset($content_width) ) {

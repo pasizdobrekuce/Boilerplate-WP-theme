@@ -14,10 +14,10 @@ class Menus {
     use Singleton;
 
     protected function __construct() {
-        $this->set_hooks();
+        $this->init();
     }
 
-    protected function set_hooks() {
+    protected function init() {
         /**
          * Hook styles
          */

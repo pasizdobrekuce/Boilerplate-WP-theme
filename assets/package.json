@@ -12,7 +12,7 @@
   "author": "Petar Ratkovic",
   "license": "ISC",
   "private": true,
-  "browserlist": [
+  "browserslist": [
     "defaults"
   ],
   "devDependencies": {
@@ -26,7 +26,10 @@
     "cssnano": "^4.1.10",
     "file-loader": "^6.1.0",
     "mini-css-extract-plugin": "^0.11.0",
+    "node-sass": "^4.14.1",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "sass-loader": "^10.0.2",
+    "sass-mq": "^5.0.1",
     "style-loader": "^1.2.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.44.1",

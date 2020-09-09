@@ -15,7 +15,7 @@ namespace HEADLAB_THEME\Inc;
 // Use Singleton
 use HEADLAB_THEME\Inc\Traits\Singleton;
 
-class TaxonomyImages {
+class Taxonomy_Images {
     use Singleton;
 
 	protected function __construct() {
